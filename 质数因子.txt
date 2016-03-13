@@ -1,0 +1,29 @@
+/*
+功能:输入一个正整数，按照从小到大的顺序输出它的所有质数的因子（如180的质数因子为2 2 3 3 5 ）
+ 
+ 
+详细描述：
+
+函数接口说明：
+    public String getResult(long ulDataInput)
+输入参数：
+         long ulDataInput：输入的正整数
+返回值：
+        String 
+*/
+#include<iostream>
+ 
+using namespace std;
+int main(){
+    int n;
+    while(cin>>n){
+    int m=n;
+    for(int i=2;i<=m;i++){
+        while(n%i==0){
+            cout<<i<<' ';
+            n=n/i;
+        }
+    }
+    }
+ return 0;
+}

@@ -1,0 +1,31 @@
+//写出一个程序，接受一个十六进制的数值字符串，输出该数值的十进制字符串。
+#include <iostream>
+#include <string>
+#include<math.h>
+using namespace std;
+int main()
+{
+     
+    string str;
+    while(cin>>str){
+    int sum=0;
+    for(int i=2;i<str.size();i++)
+    {
+        char c;
+        int sum1;
+        if(str[i]<='9'&&str[i]>='0')
+           c=str[i]-'0';
+        else if (str[i]>='A'&&str[i]<='F')
+            c=str[i]-'A'+10;
+        else if (str[i]>='a'&&str[i]<='f')
+            c=str[i]-'a'+10;
+        sum1=double(pow(16,str.size()-i-1));
+        sum=sum+c*sum1;
+         
+    }
+    cout<<sum<<endl;
+    }
+   
+    return 0;
+     
+}

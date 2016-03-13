@@ -1,0 +1,27 @@
+//计算字符串最后一个单词的长度，单词以空格隔开。
+#include<iostream>
+#include<string>
+ 
+using namespace std;
+ 
+//定义input 和output字符串
+string input;
+string output;
+ 
+int main()
+    {
+    while(getline(cin,input)){
+        //size_type由string类类型和vector类类型定义的类型
+        //用以保存任意string对象或vector对象的长度，标准库类型将size_type定义为unsigned类型
+         
+    string::size_type pos=input.rfind(" ");
+        //rfind() 找到字符串中最后一个和搜索字串一致的位置 即最后一个空格的位置
+    output.assign(input,pos+1,input.size()-pos);
+        //assign()   拷贝字符串的从pos+1位置开始，长度为input.size()-pos，到output字符串中
+         
+        cout<<output.size()<<endl;
+         
+    }
+    return 0;
+ 
+}

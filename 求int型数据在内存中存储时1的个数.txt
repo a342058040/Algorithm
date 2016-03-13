@@ -1,0 +1,23 @@
+//输入一个int型数据，计算出该int型数据在内存中存储时1的个数。
+#include<iostream>
+
+using namespace std;
+
+int main()
+{
+	int n;
+	while (cin >> n){
+		int count = 0;
+		while (n)
+		{
+			
+			if (n % 2)
+				count += 1;
+
+			n /= 2;
+
+		}
+		cout << count << endl;
+	}
+	return 0;
+}

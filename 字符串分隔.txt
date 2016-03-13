@@ -1,0 +1,42 @@
+'''
+?连续输入字符串，请按长度为8拆分每个字符串后输出到新的字符串数组；
+?长度不是8整数倍的字符串请在后面补数字0，空字符串不处理。
+'''
+s1=raw_input()
+s2=raw_input()
+ 
+def split_w(st):
+    if len(st)<8:
+        li1=[]
+        i=0
+        while i+len(st)<8:
+            li1.append('0')
+            i+=1
+ 
+        print st+''.join(li1)
+ 
+    if len(st)==8:
+        print st
+ 
+    if len(st)>8:
+        i=0
+        a=len(st)/8
+        b=len(st)%8
+        pos=0
+        while i<a:
+            ss=st[pos:pos+8]
+            pos+=8
+            print ss
+            i+=1
+        i=0   
+        li2=[]
+        if b!=0:
+            while i+b<8:
+                li2.append('0')
+                i+=1
+ 
+            print st[a*8:]+''.join(li2)
+ 
+split_w(s1)
+split_w(s2)
+

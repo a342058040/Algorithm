@@ -1,0 +1,16 @@
+编写一个函数，计算字符串中含有的不同字符的个数。字符在ACSII码范围内(0~127)。不在范围内的不作统计。
+str1=raw_input()
+def word(str1):
+    l=[]
+    i=0
+    while i<len(str1):
+        if str1[i] not in l:
+            l.append(str1[i])
+             
+         
+        i+=1
+    str2=''.join(l)
+    print len(str2)
+     
+     
+word(str1)
